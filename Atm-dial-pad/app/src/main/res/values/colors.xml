@@ -3,4 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="number_pad_background">#F7F7F7</color>
+    <color name="grey_text_color">#ff6b6b6b</color>
+    <color name="black">#000000</color>
+    <color name="number_pad_text_color">#888888</color>
 </resources>

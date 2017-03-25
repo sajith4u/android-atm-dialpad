@@ -1,17 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/content_main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="app.innova.dev.atm_dial_pad.MainActivity"
-    tools:showIn="@layout/activity_main">
+    android:layout_height="wrap_content"
+    android:background="@color/number_pad_background"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/number_pad_background"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:showDividers="beginning|middle|end">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/refundModeHeader"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Percentage (%)"
+                android:textAllCaps="true"
+                android:textColor="@color/grey_text_color"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/currencySymbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-thin"
+                    android:text=""
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="50sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/numberPadAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="0.00"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="80sp" />
+
+                <TextView
+                    android:id="@+id/precentageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="%"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="50sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
 
 
-</RelativeLayout>
+        </LinearLayout>
+
+
+        <TableRow style="@style/keyboard_row">
+
+            <TextView
+                android:id="@+id/numberSeven"
+                style="@style/keyboard_number_button"
+                android:text="@string/custom_dial_pad_number_seven" />
+
+            <TextView
+                android:id="@+id/numberEight"
+                style="@style/keyboard_number_button"
+                android:text="@string/custom_dial_pad_number_eight" />
+
+            <TextView
+                android:id="@+id/numberNine"
+                style="@style/keyboard_number_button"
+                android:text="@string/custom_dial_pad_number_nine" />
+        </TableRow>
+
+        <TableRow style="@style/keyboard_row">
+
+            <TextView
+                android:id="@+id/numberFour"
+                style="@style/keyboard_number_button"
+                android:text="@string/custom_dial_pad_number_four" />
+
+            <TextView
+                android:id="@+id/numberFive"
+                style="@style/keyboard_number_button"
+                android:text="@string/custom_dial_pad_number_five" />
+
+            <TextView
+                android:id="@+id/numberSix"
+                style="@style/keyboard_number_button"
+                android:text="@string/custom_dial_pad_number_six" />
+        </TableRow>
+
+        <TableRow
+            style="@style/keyboard_row"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/numberOne"
+                style="@style/keyboard_number_button"
+                android:text="@string/custom_dial_pad_number_one" />
+
+            <TextView
+                android:id="@+id/numberTwo"
+                style="@style/keyboard_number_button"
+                android:text="@string/custom_dial_pad_number_two" />
+
+            <TextView
+                android:id="@+id/numberThree"
+                style="@style/keyboard_number_button"
+                android:text="@string/custom_dial_pad_number_three" />
+        </TableRow>
+
+        <TableRow style="@style/keyboard_row">
+
+            <TextView
+                android:id="@+id/numberDoubleZero"
+                style="@style/keyboard_number_button"
+                android:text="@string/custom_dial_pad_number_double_zero" />
+
+
+            <TextView
+                android:id="@+id/numberZero"
+                style="@style/keyboard_number_button"
+                android:text="@string/custom_dial_pad_number_zero" />
+
+            <TextView
+                android:id="@+id/clearView"
+                style="@style/keyboard_clear_button"
+                android:text="CLR" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
